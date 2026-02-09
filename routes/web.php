@@ -7,7 +7,6 @@ use App\Models\Product;
 
 Route::get('/', function () {
     return view('welcome');
-use App\Models\Product;
 });
 Route::get('/home', function () {
     return view('home', ['name' => 'Youssef']);
@@ -20,5 +19,5 @@ Route::get('/exercice', function () {
 });
 Routes::get('/products/{id}', function ($id) {
     $products = Product::find($id);
-})
+});
 Route::resource('articles', ArticleContollerWithType::class);
